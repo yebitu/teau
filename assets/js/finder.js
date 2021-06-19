@@ -13,6 +13,28 @@
     });
   });
 
+  //체크된 건 표시
+  $(function () {
+    $('.tt_goods').click(function (e) {
+      $('.tt_goods').not(this).removeClass('active')
+        .find('input').prop('checked', false)
+        .find('.img-radio').css('opacity', '0.5');
+      $(this).addClass('active')
+        .find('input').prop('checked', true)
+        .('.img-radio').css('opacity', '1');
+    });
+  });
+
+  function selectItem_check(){
+    if($('.input').find('input[type=checkbox]').is(':checked')) {
+      $(this).prop('checked',true);
+  } else {
+      $(this).prop('checked',false);
+  });
+  }
+
+
+
 
   // $(function () {
   //   $('.checkbox').click(function (e) {
@@ -38,6 +60,8 @@ function toggleSignUp(e){
     $('#logreg-forms .form-signup').toggle(); // display:block or none
 }
 
+
+
 $(()=>{
     // Login Register Form
     $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
@@ -45,5 +69,7 @@ $(()=>{
     $('#logreg-forms #btn-signup').click(toggleSignUp);
     $('#logreg-forms #cancel_signup').click(toggleSignUp);
 })
+
+
 
 })(jQuery);
