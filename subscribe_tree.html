@@ -3,689 +3,626 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Subscribe - Tree</title>
-  <link rel="shortcut icon" href="assets/images/feature/11.jpg">
+<title>Subscribe - Tree</title>
+<link rel="shortcut icon" href="assets/images/feature/11.jpg">
 
-  <!-- fraimwork - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<!-- framework - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-  <!-- icon font - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+<!-- icon font - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
 
-  <!-- animation - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<!-- animation - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 
-  <!-- carousel - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+<!-- carousel - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 
-  <!-- popup - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+<!-- popup - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 
-  <!-- jquery-ui - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+<!-- jquery-ui - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
 
-  <!-- custom - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/teau.css">
+<!-- custom - css include -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/teau.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 </head>
-
-
 <body>
-  <!-- body_wrap - start -->
-  <div class="body_wrap">
-    <!-- backtotop - start -->
-    <div class="backtotop">
-      <a href="#" class="scroll">
-        <i class="far fa-arrow-up"></i>
-        <i class="far fa-arrow-up"></i>
-      </a>
-    </div>
-    <!-- backtotop - end -->
-
-    <!-- preloader - start -->
-    <div id="preloader"></div>
-    <!-- preloader - end -->
-
-    <!-- header_section - start
+<jsp:include page="header.jsp"></jsp:include>
+  <!-- breadcrumb_section - start
       ================================================== -->
-    <header class="header_section style_3">
-      <div class="content_wrap">
-        <div class="container maxw_1720">
-          <div class="row align-items-center">
+    <section class="breadcrumb_section text-uppercase"
+      style="background-image: url(assets/images/breadcrumb/tree.jpg);">
+      <div class="container">
+        <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">나무 구독</h1>
+        <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li>나무 구독</li>
+        </ul>
+      </div>
+      <div class="breadcrumb_icon_wrap">
+        <div class="container">
+          <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
+            <img src="assets/images/feature/11.jpg" alt="icon_not_found" width="50px">
+            <!--지금 커피아이콘 => 씨앗아이콘으로-->
+            <span class="bg_shape"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb_section - end
+      ================================================== -->
 
-            <div class="col-lg-2 col-md-6 col-6">
-              <div class="brand_logo">
-                <a class="brand_link" href="index.html">
-                  <img src="assets/images/logo/TeaU.png" srcset="assets/images/logo/logo_black_2x.png 2x"
-                    alt="logo_not_found">
-                </a>
-              </div>
-            </div>
+    <!-- reserve_table_section - start
+      ================================================== -->
+    <section class="reserve_table_section sec_ptb_120 bg-grey">
+      <div id="sub_tree" class="container">
+        <div class="reserve_table_form wow fadeInUp bg-white" style="padding-left: 0px; padding-right: 0px;"
+          data-wow-delay=".1s">
+          <div class="subcribe_title">
+            <h2 class="form_title text-center text-uppercase" style="font-size: 35px;">원하는 항목을 골라보세요(중복가능)</h2>
+          </div>
+          
+          
 
-            <div class="col-lg-10 col-md-6 col-6">
-              <nav class="main_menu navbar navbar-expand-lg">
-                <button class="mobile_menu_btn navbar-to  ggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#main_menu_dropdown" aria-controls="main_menu_dropdown" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"><i class="fal fa-bars"></i></span>
-                </button>
-                <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                  <ul class="main_menu_list ul_li">
-                    <li class="active dropdown">
-                      <a class="nav-link" href="subscribe_main.html" id="home_submenu">
-                        Subscribe
-                      </a>
-                    </li>
+          <form id="tree_form" method="get" action="insertSubTree.do">
+          <div class="row justify-content-center">
+            <div id="tt_base" class="sub_tree">
+              <p class="sub_tree_title">베이스 선택</p>
 
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="portfolio_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        shop
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="portfolio_submenu">
-                        <li><a href="shop.html">#계절별</a></li>
-                        <li><a href="shop2.html">#사용자별</a></li>
-                        <li><a href="shop3.html">#디카페인</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="services_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        board
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="services_submenu">
-                        <li><a href="reviewBoard.html">씨앗 리뷰</a></li>
-                        <li><a href="blendedTeaBoard.html">새싹&나무 리뷰</a></li>
-                        <li><a href="rankingBoard.html">새싹&나무 랭킹</a></li>
-                        <li><a href="faq.html">F.A.Q.</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="experience_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Magazine
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="experience_submenu">
-                        <li><a href="blog.html">Blog</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a class="nav-link" href="tea_finder_detail.html">Tea finder</a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="list_wrap">
+                <ul>
 
-                <ul class="header_btns_group ul_li_right">
-                  <li>
-                    <button type="button" class="main_search_btn">
-                      <a class="fal fa-user" href="contact.html" style="color: black;"></a>
-                    </button>
+    
+              
+                  <li class="tt_goods tt_base selected">
+                    <label for="chk1">
+                        <div class="tt_cate">
+                          <span>[카테출력] 녹차 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_1.png" alt="[상품명]세작" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="1" name="select" id="chk1" class="tt_base">
+                          <p class="tt_name"> 세작</p> 
+                          <p class="tt_explain">어린잎을 덖어 만든 푸릇하고 깔끔한 풀맛 녹차 </p>
+                        </div>
+                    </label>
                   </li>
-                  <li>
-                    <button type="button" class="cart_btn">
-                      <i class="fal fa-shopping-bag"></i>
-                      <small class="cart_counter">2</small>
-                    </button>
+                  
+                  <li class="tt_goods">
+                    <label>
+                  
+                        <div class="tt_cate">
+                          <span>[카테출력] 녹차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_2.png" alt="호지차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="2" name="select" id="chk2" class="tt_base">
+                          <p class="tt_name"> 호지차 </p>
+                          <p class="tt_explain"> 찻잎을 볶아 만든 고소한 맛과 풍부한 향 </p>
+                        </div>
+                    </label>
                   </li>
-                  <li>
-                    <a class="btn btn_primary text-uppercase" href="contact.html">Join Us</a>
+                                      
+                  <li class="tt_goods">
+                    <label>
+                        <div class="tt_cate">
+                          <span> 반발효차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_3.png" alt="백차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="3" name="select" class="tt_base">
+                          <p class="tt_name">백차</p> 
+                          <p class="tt_explain"> 산뜻한 맛과 향 </p>
+                        </div>
+                    </label>
+                  </li>
+
+                  <li class="tt_goods">
+                    <label>
+                        <div class="tt_cate">
+                          <span>반발효차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_4.png" alt="우롱차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="4" name="select" class="tt_base">
+                          <p class="tt_name">우롱차</p>
+                          <p class="tt_explain"> 부드러운 향기 </p>
+                        </div>
+                    </label>
+                  </li>
+
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>홍차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_5.png" alt="홍차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="5" name="select" class="tt_base">
+                          <p class="tt_name">아쌈</p> 
+                          <p class="tt_explain"> 진한 맛과 맥아향 <br> ☆밀크티 추천 </p>
+                        </div>
+                    </label>
+                  </li>
+
+                  <li class="tt_goods">
+                    <label>
+                      <div>
+                        <div class="tt_cate">
+                          <span>홍차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_6.png" alt="홍차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="6" name="select" class="tt_base">
+                          <p class="tt_name">실론</p>
+                          <p class="tt_explain">[상세설명 출력위치] </p>
+                        </div>
+                    </label>
+                  </li>
+
+                  <li class="tt_goods">
+                    <label>
+                      <div>
+                        <div class="tt_cate">
+                          <span>홍차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_7.png" alt="홍차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="7" name="select" class="tt_base">
+                          <p class="tt_name">보이차</p>
+                          <p class="tt_explain">[상세설명 출력위치] </p>
+                        </div>
+                    </label>
+                  </li>
+
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>홍차</span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_8.png" alt="홍차" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="8" name="select" class="tt_base">
+                          <p class="tt_name">루이보스</p>
+                          <p class="tt_explain">[상세설명 출력위치] </p>
+                        </div>
+                    </label>
                   </li>
                 </ul>
-              </nav>
+              </div>
             </div>
 
+
+            <div id="tt_blend" class="sub_tree tt_blend">
+              <p class="sub_tree_title">블렌딩 선택</p>
+
+              <div class="list_wrap">
+                <ul>
+                  <li class="tt_goods tt_base">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_9.png" alt="[상품명]세이지" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="9" name="select" class="tt_blend">
+                          <p class="tt_name"> 세이지</p>
+                          <p class="tt_explain"> </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_10.png" alt="로즈마리" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="10" name="select" class="tt_blend">
+                          <p class="tt_name"> 로즈마리 </p>
+                          <p class="tt_explain"> 찻잎을 볶아 만든 고소한 맛과 풍부한 향 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_11.png" alt="레몬밤" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="11" name="select" class="tt_blend">
+                          <p class="tt_name"> 레몬밤 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_12.png" alt="레몬밤" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="12" name="select" class="tt_blend">
+                          <p class="tt_name"> 레몬그라스 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_13.png" alt="레몬밤" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="13" name="select" class="tt_blend">
+                          <p class="tt_name"> 페퍼민트 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_14.png" alt="로즈힙" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="14" name="select" class="tt_blend">
+                          <p class="tt_name"> 로즈힙 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_15.png" alt="스테비아" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="15" name="select" class="tt_blend">
+                          <p class="tt_name"> 스테비아 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                  <li class="tt_goods">
+                    <label>
+
+                      <div>
+                        <div class="tt_cate">
+                          <span>[카테출력] 허브 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_16.png" alt="레몬밤" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="16" name="select" class="tt_blend">
+                          <p class="tt_name"> 허니부쉬 </p>
+                          <p class="tt_explain"> 설명 </p>
+                        </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            
+            <div id="tt_blend" class="sub_tree tt_add">
+              <p class="sub_tree_title">추가 선택</p>
+
+              <div class="list_wrap">
+                <ul>
+                  <li class="tt_goods tt_base">
+                    <label>
+                        <div class="tt_cate">
+                          <span> 부자재 </span>
+                        </><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_49.png" alt="[상품명]" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="49" name="add" id="tt_49" class="tt_add">
+                          <p class="tt_name"> 틴케이스(2개) </p> 
+                          <input type="hidden" value="5000" id="price1"/>
+                          <p class="tt_price">[가격출력] 5,000원 </p>
+                        </div>
+                    </label>
+                  </li>
+            
+                  <li class="tt_goods tt_base">
+                    <label>
+                      <div>
+                        <div class="tt_cate">
+                          <span> 부자재 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_50.png" alt="[상품명]" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="50" name="add" id="tt_50"class="tt_add">
+                          <p class="tt_name"> 티백 </p> 
+                          <input type="hidden" value="4000" id="price2"/>
+                          <p class="tt_price">[가격출력] 4,000원 </p>
+                        </div>
+                    </label>
+                  </li>
+            
+                  <li class="tt_goods tt_base">
+                    <label>
+                        <div class="tt_cate">
+                          <span> 부자재 </span>
+                        </div><br>
+                        <div class="tt_thum">
+                          <!-- <img src="${list.ttThumImg}"> -->
+                          <img src="./assets/images/tree/tt_51.png" alt="[상품명]" class="tt_thum_img">
+                        </div>
+                        <div class="tt_info">
+                          <input type="checkbox" value="51" name="add" id="tt_51" class="tt_add">
+                          <p class="tt_name"> 은박포장지 </p> 
+                          <input type="hidden" value="2000" id="price3"/>
+                          <p class="tt_price">[가격출력] 2,000원 </p>
+                        </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="tt_req" class="sub_tree">
+                <p class="sub_tree_title">요청사항</p>
+                <p>알레르기 여부 등 요청사항이 있으면 작성해주세요.</p>
+              <div>
+                <textarea placeholder="" name="req" value="" required> </textarea>
+              </div>
+            </div>
+            
+          <!-- 가격출력 -->
+          
+          
+          <div id="tt_price" class="sub_tree">
+            <p>결제금액/월</p>
+            <input type="text" name="price" id="totalPrice" class="totalPrice" size=9 value="34900" readonly>원
           </div>
+
+            <div class="text-center">
+              <br />
+              <br />
+              <br />
+              <button type="button" id="btn_submit" 
+              class="btn btn_primary text-uppercase" onclick="submitChkCount();">
+              나무 구독 신청</button>
+            </div>
+          </div>
+          </form>
+
+          <!--여기 위 부분을 수정-->
+
+          <div class="decoration_icon">
+            <img src="assets/images/feature/11.jpg" alt="icon_not_found" width="50px">
+            <span class="bg_shape"></span>
+          </div>
+        </div>
+        <div class="reserve_banner_image wow fadeInUp" data-wow-delay=".3s">
+          <img src="assets/images/reserve/tree_bottom.jpg" alt="image_not_found">
         </div>
       </div>
-
-      <!-- collapse search - start -->
-      <div class="main_search_collapse collapse" id="main_search_collapse">
-        <div class="main_search_form card">
-          <div class="container maxw_1560">
-            <form action="#">
-              <div class="form_item">
-                <input type="search" name="search" placeholder="Search here...">
-                <button type="submit" class="submit_btn"><i class="fal fa-search"></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- collapse search - end -->
-    </header>
-    <!-- header_section - end
+    </section>
+    <!-- reserve_table_section - end
       ================================================== -->
-
-    <!-- main body - start
-      ================================================== -->
-    <main>
-
-      <!-- cart_sidebar - start
-        ================================================== -->
-      <div class="sidebar-menu-wrapper">
-        <div class="cart_sidebar">
-          <button type="button" class="close_btn"><i class="fal fa-times"></i></button>
-          <h2 class="heading_title text-uppercase">Cart Items - <span>4</span></h2>
-
-          <div class="cart_items_list">
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_03.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_04.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_05.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_06.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-          </div>
-          <div class="total_price text-uppercase">
-            <span>Sub Total:</span>
-            <span>$76.00</span>
-          </div>
-          <ul class="btns_group ul_li">
-            <li><a href="cart.html" class="btn btn_primary text-uppercase">View Cart</a></li>
-            <li><a href="checkout.html" class="btn btn_border border_black text-uppercase">Checkout</a></li>
-          </ul>
-        </div>
-        <div class="cart_sidebar_overlay"></div>
-      </div>
-      <!-- cart_sidebar - end
-        ================================================== -->
-
-      <!-- breadcrumb_section - start
-        ================================================== -->
-      <section class="breadcrumb_section text-uppercase"
-        style="background-image: url(assets/images/breadcrumb/tree.jpg);">
-        <div class="container">
-          <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">나무 구독</h1>
-          <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li>나무 구독</li>
-          </ul>
-        </div>
-        <div class="breadcrumb_icon_wrap">
-          <div class="container">
-            <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
-              <img src="assets/images/feature/11.jpg" alt="icon_not_found" width="50px">
-              <!--지금 커피아이콘 => 씨앗아이콘으로-->
-              <span class="bg_shape"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- breadcrumb_section - end
-        ================================================== -->
-
-      <!-- reserve_table_section - start
-        ================================================== -->
-      <section class="reserve_table_section sec_ptb_120 bg-grey">
-        <div id="sub_tree" class="container">
-          <div class="reserve_table_form wow fadeInUp bg-white" style="padding-left: 0px; padding-right: 0px;"
-            data-wow-delay=".1s">
-            <div class="subcribe_title">
-              <h2 class="form_title text-center text-uppercase" style="font-size: 35px;">원하는 항목을 골라보세요(중복가능)</h2>
-            </div>
-
-            <div class="row justify-content-center">
-              <div id="tt_base" class="sub_tree">
-                <p class="sub_tree_title">베이스 선택</p>
-
-                <div class="list_wrap">
-                  <ul>
-                    <li class="tt_goods tt_base">
-                      <label for="chk1">
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 녹차 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_1.png" alt="[상품명]세작" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="1[상품고유번호]" name="tt_name" id="chk1">
-                            <p class="tt_name"> 세작</p> </input>
-                            <p class="tt_explain">어린잎을 덖어 만든 푸릇하고 깔끔한 풀맛 녹차 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 녹차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_2.png" alt="호지차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="2[상품고유번호]" name="tt_name" id="chk2">
-                            <p class="tt_name"> 호지차 </p></input>
-                            <p class="tt_explain"> 찻잎을 볶아 만든 고소한 맛과 풍부한 향 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span> 반발효차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_3.png" alt="백차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="3[상품고유번호]" name="tt_name">
-                            <p class="tt_name">백차</p> </input>
-                            <p class="tt_explain"> 산뜻한 맛과 향 </p>
-                          </div>
-                      </label>
-                    </li>
-
-                    <li class="tt_goods">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span>반발효차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_4.png" alt="우롱차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="4[상품고유번호]" name="tt_name">
-                            <p class="tt_name">우롱차</p></input>
-                            <p class="tt_explain"> 부드러운 향기 </p>
-                          </div>
-                      </label>
-                    </li>
-
-                    <li class="tt_goods">
-                      <label>
-
-                        <div>
-                          <div class="tt_cate">
-                            <span>홍차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_5.png" alt="홍차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="5[상품고유번호]" name="tt_name">
-                            <p class="tt_name">아쌈</p> </input>
-                            <p class="tt_explain"> 진한 맛과 맥아향 <br> ☆밀크티 추천 </p>
-                          </div>
-                      </label>
-                    </li>
-
-                    <li class="tt_goods">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span>홍차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_6.png" alt="홍차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="6[상품고유번호]" name="tt_name">
-                            <p class="tt_name">실론</p></input>
-                            <p class="tt_explain">[상세설명 출력위치] </p>
-                          </div>
-                      </label>
-                    </li>
-
-                    <li class="tt_goods">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span>홍차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_7.png" alt="홍차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="7[상품고유번호]" name="tt_name">
-                            <p class="tt_name">보이차</p></input>
-                            <p class="tt_explain">[상세설명 출력위치] </p>
-                          </div>
-                      </label>
-                    </li>
-
-                    <li class="tt_goods">
-                      <label>
-
-                        <div>
-                          <div class="tt_cate">
-                            <span>홍차</span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_8.png" alt="홍차" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="8[상품고유번호]" name="tt_name">
-                            <p class="tt_name">루이보스</p></input>
-                            <p class="tt_explain">[상세설명 출력위치] </p>
-                          </div>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  </main>
+<jsp:include page="footer.jsp"></jsp:include>
 
 
-              <div id="tt_blend" class="sub_tree tt_blend">
-                <p class="sub_tree_title">블렌딩 선택</p>
 
-                <div class="list_wrap">
-                  <ul>
-                    <li class="tt_goods tt_base">
-                      <label>
+<script>
+  var chkGoodsList = new Array();
+  // var chkGoodsList = [];
+  var chkCnt = 0;
+  var selected;
+  var addprice = 0;
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_9.png" alt="[상품명]세이지" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="9" name="tt_name">
-                            <p class="tt_name"> 세이지</p> </input>
-                            <p class="tt_explain">어린잎을 덖어 만든 푸릇하고 깔끔한 풀맛 녹차 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+  $(document).ready(function () {
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_10.png" alt="로즈마리" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="10" name="tt_name">
-                            <p class="tt_name"> 로즈마리 </p></input>
-                            <p class="tt_explain"> 찻잎을 볶아 만든 고소한 맛과 풍부한 향 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+    //각각 체크박스를 클릭시 체크 알아보게 변화
+    $("input:checkbox").on("click", function () {
+      // chkGoodsList.push($(this).val());
+      if($(this).is(":checked") == true){
+        $(this).parents('li').addClass('selected');
+      } else {
+        $(this).parents('li').removeClass('selected');
+      }
+      // return false;
+      // $(this).parents('li').toggleClass('selected');
+    });
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_11.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="11" name="tt_name">
-                            <p class="tt_name"> 레몬밤 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+    // 베이스 선택
+    $("input:checkbox[name='select']").on("click", function () {
+      var chkCntBs = $("input:checkbox[class='tt_base']:checked").length;
+      if (chkCntBs > 3) {
+        $(this).prop("checked", false);
+        alert("베이스는 3개까지만 선택할 수 있습니다.");
+      }
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_12.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="12" name="tt_name">
-                            <p class="tt_name"> 레몬그라스 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+      // 베이스+블렌드 총 갯수 10개 이하
+      // $("input:checkbox[name='select']").on("click", function () {
+        chkCnt = $("input:checkbox[name='select']:checked").length;
+        if (chkCnt > 10) {
+          $(this).prop("checked", false);
+          alert("10개까지 선택하실 수 있습니다.")
+        }
+      //});
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_13.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="13" name="tt_name">
-                            <p class="tt_name"> 페퍼민트 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+    });
+    
+    
+    $("input:checkbox[name='add']").on("click", function () {
+      var price = $('#totalPrice').val();
+        // value 값을 string으로 가져올 수도 있으니 int로 변환
+        price = parseInt(price);
+        if($('#'+this.id).is(":checked")== true){
+        if(this.id == 'tt_49') {
+            var price1 = $('#price1').val();
+              price1 = parseInt(price1);
+        } else if(this.id == 'tt_50') {
+            var price1 = $('#price2').val();
+            price1 = parseInt(price1);
+        } else if(this.id == 'tt_51') {
+            var price1 = $('#price3').val();
+            price1 = parseInt(price1);
+        }
+          price += price1;
+          console.log("49번 플러스");
+          console.log("+"+price1);
+          console.log(price);
+        } else {
+          if(this.id == 'tt_49') {
+              var price1 = $('#price1').val();
+              price1 = parseInt(price1);
+          } else if(this.id == 'tt_50') {
+              var price1 = $('#price2').val();
+              price1 = parseInt(price1);
+          } else if(this.id == 'tt_51') {
+              var price1 = $('#price3').val();
+              price1 = parseInt(price1);
+          }
+          price -= price1;
+          console.log("49번 선택 해제");
+          console.log("-"+price1);
+          console.log(price);
+        }
+        
+        //토탈프라이스에 프라이스값 대입
+        $('#totalPrice').val(price);
+      });
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_14.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="14" name="tt_name">
-                            <p class="tt_name"> 로즈힙 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_15.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="15" name="tt_name">
-                            <p class="tt_name"> 스테비아 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                    <li class="tt_goods">
-                      <label>
+  });
+  
+  /* 함수 */
 
-                        <div>
-                          <div class="tt_cate">
-                            <span>[카테출력] 허브 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_16.png" alt="레몬밤" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="16" name="tt_name">
-                            <p class="tt_name"> 허니부쉬 </p></input>
-                            <p class="tt_explain"> 설명 </p>
-                          </div>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+  function submitChkCount() {
+    chkCnt = $("input:checkbox[name='select']:checked").length;
+    if(chkCnt == 10) {
+      $.ajax({
+            type: 'POST',
+            url: 'insertSubTree.do',
+            dataType: 'text', // form에 있는 데아터들을 controller로 text타입으로 
+            data: $('#tree_form').serialize(),
+            
+            success: function(data) {
+               alert(data);
+               window.location.href('getSubTree.do'); //JSP 이동 페이지 적기  
+            }, 
+            error: function(e) {
+               console.log(e);
+            }
+         });
+    
+    } else if(chkCnt < 10) {
+      alert("총 10개 선택 해 주세요. 고객님의 현재 선택 갯수: " + chkCnt + "개");
+      return false;
+      
+    } 
+      
 
-              
-              <div id="tt_blend" class="sub_tree tt_add">
-                <p class="sub_tree_title">추가 선택</p>
-              
-                <div class="list_wrap">
-                  <ul>
-                    <li class="tt_goods tt_base">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span> 부자재 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_49.png" alt="[상품명]" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="49" name="tt_name">
-                            <p class="tt_name"> 틴케이스(2개) </p> </input>
-                            <p class="tt_price">[가격출력] 5,000원 </p>
-                          </div>
-                      </label>
-                    </li>
-              
-                    <li class="tt_goods tt_base">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span> 부자재 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_50.png" alt="[상품명]" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="50" name="tt_name">
-                            <p class="tt_name"> 티백 </p> </input>
-                            <p class="tt_price">[가격출력] 5,000원 </p>
-                          </div>
-                      </label>
-                    </li>
-              
-                    <li class="tt_goods tt_base">
-                      <label>
-                        <div>
-                          <div class="tt_cate">
-                            <span> 부자재 </span>
-                          </div><br>
-                          <div class="tt_thum">
-                            <!-- <img src="${list.ttThumImg}"> -->
-                            <img src="./assets/images/tree/tt_51.png" alt="[상품명]" class="tt_thum_img">
-                          </div>
-                          <div class="tt_info">
-                            <input type="checkbox" value="51" name="tt_name">
-                            <p class="tt_name"> 은박포장지 </p> </input>
-                            <p class="tt_price">[가격출력] 1,000원 </p>
-                          </div>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
+    /*  goSubmit;
+      alert("구독신청 완료") */
+      
+    }
+  
 
-                <div id="tt_req" class="sub_tree">
-                  <p class="sub_tree_title">요청사항</p>
-                  <p>알레르기 여부 등 요청사항이 있으면 작성해주세요.</p>
-                <div>
-                  <textarea placeholder=""" name="tt_req" value="" required> </textarea>
-                </div>
-              </div>
+  function goSubmit() {
+    $("#tree_form").submit();
+  }
 
-              <div class="text-center">
-                <br />
-                <br />
-                <br />
-                <button type="submit" class="btn btn_primary text-uppercase">나무 구독 신청</button>
-              </div>
-            </div>
 
-            <!--여기 위 부분을 수정-->
+  
 
-            <div class="decoration_icon">
-              <img src="assets/images/feature/11.jpg" alt="icon_not_found" width="50px">
-              <span class="bg_shape"></span>
-            </div>
-          </div>
-          <div class="reserve_banner_image wow fadeInUp" data-wow-delay=".3s">
-            <img src="assets/images/reserve/tree_bottom.jpg" alt="image_not_found">
-          </div>
-        </div>
-      </section>
-      <!-- reserve_table_section - end
-        ================================================== -->
-    </main>
-    <!-- main body - end
-      ================================================== -->
+ 
 
-    <!-- footer_section - start
-      ================================================== -->
+</script>
 
-    <!-- footer_section - end
-      ================================================== -->
-
-  </div>
-  <!-- body_wrap - end -->
+</body>
+</html>
 
   <!-- fraimwork - jquery include -->
   <script src="assets/js/jquery.min.js"></script>
@@ -710,13 +647,12 @@
   <!-- jquery-ui - jquery include -->
   <script src="assets/js/jquery-ui.js"></script>
 
+
   <!-- off canvas sidebar - jquery include -->
   <script src="assets/js/mCustomScrollbar.js"></script>
 
   <!-- custom - jquery include -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/finder.js"></script>
-
 </body>
 
 </html>
