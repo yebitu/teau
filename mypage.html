@@ -1,367 +1,142 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>mypage</title>
-  <link rel="shortcut icon" href="assets/images/feature/11.jpg">
+    <title>My page</title>
+    <link rel="shortcut icon" href="assets/images/feature/11.jpg">
 
-  <!-- fraimwork - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!-- fraimwork - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-  <!-- icon font - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+    <!-- icon font - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
 
-  <!-- animation - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- animation - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 
-  <!-- carousel - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <!-- carousel - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 
-  <!-- popup - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <!-- popup - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 
-  <!-- jquery-ui - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+    <!-- jquery-ui - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
 
-  <!-- custom - css include -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/teau.css">
-
-
-</head>
-
-
+    <!-- custom - css include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/teau.css"> 
+  </head>
 <body>
-
-  <!-- body_wrap - start -->
-  <div class="body_wrap">
-
-    <!-- backtotop - start -->
-    <div class="backtotop">
-      <a href="#" class="scroll">
-        <i class="far fa-arrow-up"></i>
-        <i class="far fa-arrow-up"></i>
-      </a>
-    </div>
-    <!-- backtotop - end -->
-
-    <!-- preloader - start -->
-    <div id="preloader"></div>
-    <!-- preloader - end -->
-
-    <!-- header_section - start
-        ================================================== -->
-    <header class="header_section style_3">
-      <div class="content_wrap">
-        <div class="container maxw_1720">
-          <div class="row align-items-center">
-
-            <div class="col-lg-2 col-md-6 col-6">
-              <div class="brand_logo">
-                <a class="brand_link" href="index.html">
-                  <img src="assets/images/logo/TeaU.png" srcset="assets/images/logo/logo_black_2x.png 2x"
-                    alt="logo_not_found">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-10 col-md-6 col-6">
-              <nav class="main_menu navbar navbar-expand-lg">
-                <button class="mobile_menu_btn navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#main_menu_dropdown" aria-controls="main_menu_dropdown" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"><i class="fal fa-bars"></i></span>
-                </button>
-                <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
-                  <ul class="main_menu_list ul_li">
-                    <li class="active dropdown">
-                      <a class="nav-link" href="about.html" id="home_submenu">
-                        Subscribe
-                      </a>
-                      <!-- <ul class="submenu dropdown-menu" aria-labelledby="home_submenu">
-                            <li><a href="index.html">씨앗구독</a></li>
-                            <li><a href="index_2.html">새싹구독</a></li>
-                            <li><a href="index_3.html">나무구독</a></li>
-                          </ul> -->
-                    </li>
-
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="portfolio_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        shop
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="portfolio_submenu">
-                        <li><a href="shop.html">#계절별</a></li>
-                        <li><a href="shop_details.html">#사용자별</a></li>
-                        <li><a href="shop_details.html">#디카페인</a></li>
-                      </ul>
-                    </li>
-                    <!-- <li class="dropdown">
-                          <a class="nav-link" href="#" id="about_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                          <ul class="submenu dropdown-menu" aria-labelledby="about_submenu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="about_2.html">About Me</a></li>
-                          </ul>
-                        </li> -->
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="services_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        board
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="services_submenu">
-                        <li><a href="menu.html">씨앗</a></li>
-                        <li><a href="cart.html">새싹&나무</a></li>
-                        <li><a href="faq.html">F.A.Q.</a></li>
-                        <!-- <li class="dropdown">
-                              <a href="#" id="checkout_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Checkout</a>
-                              <ul class="submenu dropdown-menu" aria-labelledby="checkout_submenu">
-                                <li><a href="checkout.html">Checkout Step 1</a></li>
-                                <li><a href="checkout_step2.html">Checkout Step 2</a></li>
-                                <li><a href="checkout_step3.html">Checkout Step 3</a></li>
-                              </ul>
-                            </li>
-                            <li><a href="reserve_table.html">Reserve Table</a></li>
-                            <li><a href="reservation_form.html">Reservation Form</a></li> -->
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a class="nav-link" href="#" id="experience_submenu" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Magazine
-                      </a>
-                      <ul class="submenu dropdown-menu" aria-labelledby="experience_submenu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <!-- <li><a href="blog_details.html">Blog Details</a></li> -->
-                      </ul>
-                    </li>
-                    <li>
-                      <a class="nav-link" href="contact.html">Contact us</a>
-                    </li>
-                  </ul>
+<jsp:include page="header.jsp"></jsp:include>
+    <!-- contact_section - start
+        ================================================== -->  
+        <section class="contact_section sec_ptb_120 bg_default_gray">
+          <!--회원이름&포인트-->
+          <div class="container">
+            <div class="contact_form bg_white">
+              <div class="row">
+                <div class="offset-md-1 col-md-3">
+                  <div class="item_content img-fluid">
+                    <h3><i class="fas fa-user"></i>티유 님 </h3>
+                  </div>
                 </div>
-
-                <ul class="header_btns_group ul_li_right">
-                  <li>
-                    <button type="button" class="main_search_btn" data-bs-toggle="collapse"
-                      data-bs-target="#main_search_collapse" aria-expanded="false" aria-controls="main_search_collapse">
-                      <i class="fal fa-search"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="cart_btn">
-                      <i class="fal fa-shopping-bag"></i>
-                      <small class="cart_counter">2</small>
-                    </button>
-                  </li>
-                  <li>
-                    <a class="btn btn_primary text-uppercase" href="contact.html">Join Us</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- collapse search - start -->
-      <div class="main_search_collapse collapse" id="main_search_collapse">
-        <div class="main_search_form card">
-          <div class="container maxw_1560">
-            <form action="#">
-              <div class="form_item">
-                <input type="search" name="search" placeholder="Search here...">
-                <button type="submit" class="submit_btn"><i class="fal fa-search"></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- collapse search - end -->
-    </header>
-    <!-- header_section - end
-        ================================================== -->
-
-    <!-- main body - start
-        ================================================== -->
-    <main>
-
-      <!-- cart_sidebar - start
-          ================================================== -->
-      <div class="sidebar-menu-wrapper">
-        <div class="cart_sidebar">
-          <button type="button" class="close_btn"><i class="fal fa-times"></i></button>
-          <h2 class="heading_title text-uppercase">Cart Items - <span>4</span></h2>
-
-          <div class="cart_items_list">
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_03.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_04.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_05.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-
-            <div class="cart_item">
-              <div class="item_image">
-                <img src="assets/images/recent_post/img_06.jpg" alt="image_not_found">
-              </div>
-              <div class="item_content">
-                <h4 class="item_title">
-                  Rorem ipsum dolor sit amet, sectetur adipisi cingey.
-                </h4>
-                <span class="item_price">$19.00</span>
-                <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-              </div>
-            </div>
-          </div>
-          <div class="total_price text-uppercase">
-            <span>Sub Total:</span>
-            <span>$76.00</span>
-          </div>
-          <ul class="btns_group ul_li">
-            <li><a href="cart.html" class="btn btn_primary text-uppercase">View Cart</a></li>
-            <li><a href="checkout.html" class="btn btn_border border_black text-uppercase">Checkout</a></li>
-          </ul>
-        </div>
-        <div class="cart_sidebar_overlay"></div>
-      </div>
-      <!-- cart_sidebar - end
-          ================================================== -->
-
-      <!-- contact_section - start
-        ================================================== -->
-      <section class="contact_section sec_ptb_120 bg_default_gray">
-        <!--회원이름&포인트-->
-        <div class="container" style="margin-top: 50px;">
-          <div class="contact_form bg_white">
-            <div class="row">
-              <div class="offset-md-1 col-md-3">
-                <div class="item_content img-fluid">
-                  <h3><i class="fas fa-user"></i>티유 님 </h3>
-                </div>
-              </div>
-              <div class="offset-md-3 col-md-5">
-                <div class="item_content">
-                  <h3 class="item_title text-uppercase">보유 포인트 : 3,000p</h3>
-                  <br>
+                <div class="offset-md-3 col-md-5">
+                  <div class="item_content">
+                    <h3 class="item_title text-uppercase">보유 포인트 : ${member.memberPoint}</h3>
+                    <br>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <br>
-        <div class="container">
-          <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
-            <!-- 회원 정보 불러오기 -->
-            <!-- <form action="#"> -->
+          <br>
+          <div class="container">
+            <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
+              <!-- 회원 정보 불러오기 -->
+              <!-- <form action="#"> -->
 
-            <div class="hi container">
-              <div class="hi section">
-                <div class="row">
-                  <div class="col-sm-9">
-                    <h3>내 정보</h3><br>
-                    <table class="hi table table-divider">
-                      <tbody>
-                        <tr>
-                          <th class="hi width-xsmall">이름<span class="hi text-danger">*</span></th>
-                          <td>티유</td>
-                        </tr>
-                        <tr>
-                          <th class="hi width-xsmall">이메일 주소<span class="hi text-danger">*</span></th>
-                          <td>teau@gmail.com</td>
-                        </tr>
-                        <tr>
-                          <th class="hi width-xsmall">전화번호<span class="hi text-danger">*</span></th>
-                          <td>010-1111-1111</td>
-                        </tr>
-
-                        <!-- <tr>
+                <div class="hi container"><div class="hi section">
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <h3>내 정보</h3><br>
+                      <table class="hi table table-divider">
+                        <tbody>
+                          <tr>
+                            <th class="hi width-xsmall">아이디<span class="hi text-danger">*</span></th>
+                            <td>${member.memberId }</td>
+                          </tr>
+                          <tr>
+                            <th class="hi width-xsmall">이름<span class="hi text-danger">*</span></th>
+                            <td>${member.memberName }</td>
+                          </tr>
+                          <tr>
+                            <th class="hi width-xsmall">이메일 주소<span class="hi text-danger">*</span></th>
+                            <td>${member.memberEmail }</td>
+                          </tr>
+                          <tr>
+                            <th class="hi width-xsmall">전화번호<span class="hi text-danger">*</span></th>
+                            <td>${member.memberPhone }</td>
+                          </tr>
+  
+                          <!-- <tr>
                               <th class="hi width-xsmall">회원 등급</th>
                               <td>그린티회원</td>
                             </tr> -->
-                        <!-- <tr>
+                          <!-- <tr>
                             <th class="hi width-xsmall">포인트</th>
                             <td>3000</td>
                           </tr> -->
-
-                        <tr>
-                          <th class="hi width-xsmall">주소</th>
-                          <td>서울특별시 서초구 강남대로 459</td>
-                        </tr>
-
-                        <!-- <tr>
+  
+                          <tr>
+                            <th class="hi width-xsmall">주소</th>
+                            <td>${member.memberAddress }</td>
+                          </tr>
+  
+                          <!-- <tr>
                                 <th class="hi width-xsmall">최근 로그인</th>
                                 <td>2021-05-27</td>
                               </tr> -->
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class="col-sm-3">
-                    <h3>회원 정보</h3>
-                    <hr class="hi hr">
-
-                    <ul class="hi list-menu">
-                      <li><a href="mypage_edit.html">회원정보 변경</a></li>
-                    </ul>
-                  </div>
+                        </tbody>
+                      </table>
+                    </div>
+  
+                    <div class="col-sm-3">
+                      <h3>회원 정보</h3>
+                      <hr class="hi hr">
+                      
+                      <ul class="hi list-menu">
+                        <li><a href="mypage_edit.html">회원정보 변경</a></li>
+                      </ul>
+                    </div>  </div>
                 </div>
-              </div>
-            </div>
+                  </div>
 
 
-            <!-- <div class="text-center">
+                <!-- <div class="text-center">
                   <button type="submit" class="btn btn_primary text-uppercase">Send massage</button>
                 </div> -->
-            <!-- </form> -->
+              <!-- </form> -->
+            </div>
           </div>
-        </div>
-        <br>
-        <!-- 구독정보 -->
-        <div class="container">
-          <div id="subscribe_order" class="contact_form bg_white">
+          <br>
+          
+          <!-- 구독정보 -->
+        <div id="subscribe_order" class="container">
+          <div class="contact_form bg_white">
             <h3>구독 정보</h3><br>
             <ul>
               <li>
-
                 <div class="row">
                   <div class="col-md-4 col-xs-4">
                     <div class="item_content">
@@ -375,33 +150,32 @@
 
                           <div>
                             <br>
-                            <h5 class="col-md-"> 새싹 구독
-                              
-                              <button type="button" class="btn btn_primary text-uppercase" style="margin-left:38%;">수정</button>
-                              <button type="button" class="btn btn_primary text-uppercase">해지</button>  
-                           </h5>
+                            <h5> ${sub.orderCate} 구독
+                            <button type="button" class="btn btn-primary btn-radio" onclick="update_Check();">수정</button>          
+                            <button type="button" class="btn btn-primary btn-radio" onclick="deletesub();">해지</button>
+                            </h5>
                           </div>
                           <hr>
                           <div>
                             <dt>주문번호(구독번호)</dt>
-                            <dd>202101011111</dd>
+                            <dd><fmt:formatDate value="${sub.subDate}" pattern="yyyyMMdd"/>${sub.subId}</dd>
                           </div>
                           <div>
                             <dt>결제금액</dt>
-                            <dd>23,000원/월</dd>
+                            <dd>${sub.subPrice}원/월</dd>
                           </div>
                           <div>
-                            <dt>구독기한</dt>
-                            <dd>2021.08.08까지</dd>
+                            <dt>취향선택</dt>
+                            <dd>#${sub.tagSeason}, #${sub.tagBase}, #${sub.tagDrink}, #${sub.tagBlend}</dd>
                           </div>
 
                         </div>
 
                       </div>
                       <!-- <div>
-                      <button type="button" class="btn btn-primary btn-radio">수정</button>                    
-                      <button type="button" class="btn btn-primary btn-radio">해지</button>
-                    </div> -->
+                        <button type="button" class="btn btn_primary text-uppercase">수정</button>                   
+                        <button type="button" class="btn btn_primary text-uppercase">해지</button> 
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -411,194 +185,179 @@
           </div>
         </div>
         <br>
-        <!--배송정보-->
-        <div class="container">
-          <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
-
-            <div class="main_contact_info_wrap">
-
-              <div class="contact_info_item">
-
-                <div class="item_icon"><i class="fas fa-archive"></i></div>
-                <div class="item_content">
-                  <h3 class="item_title text-uppercase">상품 준비중</h3>
-                  <p>고객님의 상품을 준비중입니다.</p>
-
+          
+          <!--배송정보-->
+          <div class="container">
+            <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
+              
+              <div class="main_contact_info_wrap">
+                
+                <div class="contact_info_item">
+                  
+                  <div class="item_icon"><i class="fas fa-archive"></i></div>
+                  <div class="item_content">
+                    <h3 class="item_title text-uppercase">상품 준비중</h3>
+                    <p>고객님의 상품을 준비중입니다.</p>
+                    
+                  </div>
                 </div>
-              </div>
-              <div class="contact_info_item">
-                <div class="item_icon"><i class="fas fa-truck"></i></div>
-                <div class="item_content">
-                  <h3 class="item_title text-uppercase">배송중</h3>
-                  <p>배송이 시작되었습니다.</p>
-                  <p>잠시만 기다려주세요!</p>
+                <div class="contact_info_item">
+                  <div class="item_icon"><i class="fas fa-truck"></i></div>
+                  <div class="item_content">
+                    <h3 class="item_title text-uppercase">배송중</h3>
+                    <p>배송이 시작되었습니다.</p>
+                    <p>잠시만 기다려주세요!</p>
+                  </div>
                 </div>
-              </div>
-              <div class="contact_info_item">
-                <div class="item_icon"><i class="fas fa-home"></i></div>
-                <div class="item_content">
-                  <h3 class="item_title text-uppercase">배송완료</h3>
-                  <p>배송이 완료되었습니다.</p>
-                  <p>후기를 남겨주세요!</p>
+                <div class="contact_info_item">
+                  <div class="item_icon"><i class="fas fa-home"></i></div>
+                  <div class="item_content">
+                    <h3 class="item_title text-uppercase">배송완료</h3>
+                    <p>배송이 완료되었습니다.</p>
+                    <p>후기를 남겨주세요!</p>
+                  </div>
                 </div>
-              </div>
+              </div>              
             </div>
           </div>
-        </div>
 
-        <br>
+          <br>
 
-        <div class="container">
-          <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
-            <!-- <div class="main_contact_info_wrap"> -->
-            <div class="head_aticle">
-              <h3>주문/배송내역</h3>
-              <br>
-            </div>
+          <div class="container">
+            <div class="contact_form bg_white wow fadeInUp" data-wow-delay=".1s">
+              <!-- <div class="main_contact_info_wrap"> -->
+                <div class="head_aticle">
+                  <h3>주문/배송내역</h3>
+                  <br>
+                </div>
+                
+                <div id="viewOrderLIst" class="">
+                  <div class="search_date">
+                  </div>
+                  <div>
+                    <ul class="list_order">
+                    <li class="order_item">
+                      <div class="row order_header">
+                        <div class="col-md-9 col-xs-9">
+                          <div class="order_date">
+                            <dt> 2021.06.01 (18시 31분) </dt>
+                          </div>
+                          <div class="order_name">
+                            <a href="/buy_detail.html"><h5>제주영귤차 외 2종</h5></a>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-xs-3 order_button ">
+                          <span class="button"><a class="link">주문취소</a></span>
+                          <span class="button"><a class="link">1:1문의</a></span>
+                        </div>
+                      </div>
+                        <hr>
+                        <div class="row order_info">
+                            <div class="col-xs-9 order_goods">
+                              <div class="order_id">
+                                <dt>주문번호</dt>
+                                  <a href="#"><dd>202106011831</dd></a>
+                                </div>
+                            <div class="order_price">
+                              <dt>결제금액</dt>
+                              <dd>25,000원</dd>
+                            </div>
+                            <div class="order_status">
+                              <dt>주문상태</dt>
+                              <dd>배송중</dd>                            
+                              <button>배송조회</button>
+                            </div>
+                          </div>
 
-            <div id="viewOrderLIst" class="">
-              <div class="search_date">
+                      </div>
+                    </li>
+
+                    <li class="order_item">
+                      <div class="row order_header">
+                        <div class="col-md-9 col-xs-9">
+                          <div class="order_date">
+                            <dt>2021.06.01 (18시 31분) </dt>
+                          </div>
+                          <div class="order_name">
+                            <a href="/buy_detail.html"><h5>제주영귤차 외 2종</h5></a>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-xs-3 order_button ">
+                          <span class="button"><a class="link">주문취소</a></span>
+                          <span class="button"><a class="link">1:1문의</a></span>
+                        </div>
+                      </div>
+                        <hr>
+                        <div class="row order_info">
+                            <div class="col-xs-9 order_goods">
+                              <div class="order_id">
+                                <dt>주문번호</dt>
+                                  <a href="#"><dd>202106011831</dd></a>
+                                </div>
+                            <div class="order_price">
+                              <dt>결제금액</dt>
+                              <dd>25,000원</dd>
+                            </div>
+                            <div class="order_status">
+                              <dt>주문상태</dt>
+                              <dd>배송중</dd>                            
+                              <button>배송조회</button>
+                            </div>
+                          </div>
+
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
               </div>
-              <div>
-                <ul class="list_order">
-                  <li class="order_item">
-                    <div class="row order_header">
-                      <div class="col-md-9 col-xs-9">
-                        <div class="order_date">
-                          <dt>2021.06.01 (18시 31분) </dt>
-                        </div>
-                        <div class="order_name">
-                          <a href="/buy_detail.html">
-                            <h5>제주영귤차 외 2종</h5>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-xs-3 order_button ">
-                        <span class="button"><a class="link">주문취소</a></span>
-                        <span class="button"><a class="link">1:1문의</a></span>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row order_info">
-                      <div class="col-xs-9 order_goods">
-                        <div class="order_id">
-                          <dt>주문번호</dt>
-                          <a href="#">
-                            <dd>202106011831</dd>
-                          </a>
-                        </div>
-                        <div class="order_price">
-                          <dt>결제금액</dt>
-                          <dd>25,000원</dd>
-                        </div>
-                        <div class="order_status">
-                          <dt>주문상태</dt>
-                          <dd>배송중</dd>
-                          <button>배송조회</button>
-                        </div>
-                      </div>
-
-                    </div>
-                  </li>
-
-                  <li class="order_item">
-                    <div class="row order_header">
-                      <div class="col-md-9 col-xs-9">
-                        <div class="order_date">
-                          <dt>2021.06.01 (18시 31분) </dt>
-                        </div>
-                        <div class="order_name">
-                          <a href="/buy_detail.html">
-                            <h5>제주영귤차 외 2종</h5>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-xs-3 order_button ">
-                        <span class="button"><a class="link">주문취소</a></span>
-                        <span class="button"><a class="link">1:1문의</a></span>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="row order_info">
-                      <div class="col-xs-9 order_goods">
-                        <div class="order_id">
-                          <dt>주문번호</dt>
-                          <a href="#">
-                            <dd>202106011831</dd>
-                          </a>
-                        </div>
-                        <div class="order_price">
-                          <dt>결제금액</dt>
-                          <dd>25,000원</dd>
-                        </div>
-                        <div class="order_status">
-                          <dt>주문상태</dt>
-                          <dd>배송중</dd>
-                          <button>배송조회</button>
-                        </div>
-                      </div>
-
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
 
 
-      </section>
-      <!-- contact_section - end
+        </section>
+        <!-- contact_section - end
         ================================================== -->
 
-      <!-- google map - start
-        ================================================== -->
-      <!-- <div class="map_section">
-          <div id="mapBox" class="wow fadeInUp" data-wow-delay=".1s" data-lat="40.701083" data-lon="-74.1522848" data-zoom="12" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia." data-mlat="40.701083" data-mlon="-74.1522848">
-          </div>
-        </div> -->
-      <!-- google map - end
-        ================================================== -->
-
-    </main>
-    <!-- main body - end
+      </main>
+      <!-- main body - end
       ================================================== -->
 
-    <!-- footer_section - start
-      <!-- footer_section - end
-      ================================================== -->
+<jsp:include page="footer.jsp"></jsp:include>
+<script>
 
-  </div>
-  <!-- body_wrap - end -->
+ function update_Check(){
+	 
+	 if( "${sub.orderCate}" == "씨앗"){
+			location.href= "updateSubSeed.do";
+			
+		} else if( "${sub.orderCate}" == "새싹") {
+			location.href= "updateSubLeaf.do";	
+			
+		} else if ("${sub.orderCate}" == "나무"){
+			location.href= "updateSubTree.do";
+			
+		}
+	 
+	$.ajax({
+		type:'POST',
+		url:'updateSubLeaf.do',
+		dataType:'text',
+		data: $()
+		
+	})
+}
 
-  <!-- fraimwork - jquery include -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+function deletesub(){
+	
+	if( "${sub.orderCate}" == "씨앗"){
+		location.href= "deleteSubSeed.do";
+	} else if( "${sub.orderCate}" == "새싹") {
+		location.href= "deleteSubLeaf.do";		
+	} else if ("${sub.orderCate}" == "나무"){
+		location.href= "deleteSubTree.do";
+	}
+	
+}
 
-  <!-- animation - jquery include -->
-  <script src="assets/js/wow.min.js"></script>
-
-  <!-- carousel - jquery include -->
-  <script src="assets/js/slick.min.js"></script>
-
-  <!-- popup - jquery include -->
-  <script src="assets/js/magnific-popup.min.js"></script>
-
-  <!-- isotope filter - jquery include -->
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-
-  <!-- google map - jquery include -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
-  <script src="assets/js/gmaps.min.js"></script>
-
-  <!-- jquery-ui - jquery include -->
-  <script src="assets/js/jquery-ui.js"></script>
-
-  <!-- off canvas sidebar - jquery include -->
-  <script src="assets/js/mCustomScrollbar.js"></script>
-
-  <!-- custom - jquery include -->
-  <script src="assets/js/main.js"></script>
-
+</script>
 </body>
-
 </html>

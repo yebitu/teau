@@ -246,7 +246,13 @@
 }
 
 
+/* 마이페이지 */
 
+#subscribe_order .nodata {
+  display: none;
+  visibility: hidden;
+
+}
 
 /* 티파인더 */
 @font-face {
